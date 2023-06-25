@@ -18,16 +18,10 @@
 // 
 
 const oddFiltration = (arr) => {
-    let newArr=[];
-    // write your code here
-    for (let i = 0; i < arr.length; i++) {
-        
-          if(arr[i]%2!=0){
-            newArr.push(arr[i]);
-          }
-        
-    }
-    return newArr;
+  return arr.filter((value) => {
+    return value % 2 !== 0;
+});
+  
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -79,28 +73,23 @@ const oddFiltration = (arr) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvsFiltration = (arr) => {
-    let filteredCvs = [];
+  return arr.filter((cv) => {
+    return cv.yearsOfExperience > 4 && cv.tech === "JS";
+}).map((cv) => {
+    let fullName = "";
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].yearsOfExperience > 4 && arr[i].tech === "JS") {
-      let fullName = "";
-
-      if (arr[i].firstName) {
-        fullName += arr[i].firstName;
-      }
-
-      if (arr[i].LastName) {
-        if (fullName) {
-          fullName += " ";
-        }
-        fullName += arr[i].LastName;
-      }
-
-      filteredCvs.push({ fullName, tech: arr[i].tech });
+    if (cv.firstName) {
+        fullName += cv.firstName;
     }
-  }
 
-  return filteredCvs;
+    if (cv.LastName) {
+        if (fullName) {
+            fullName += " ";
+        }
+        fullName += cv.LastName;
+    }
+
+    return { fullName, tech: cv.tech };});
     
 }
 // -------------------------------------------------------------------------------------------------------
