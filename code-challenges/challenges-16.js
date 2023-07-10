@@ -39,6 +39,9 @@ const reverseString = (string) => {
 const detectFace = (arr) => {
     //write your code here ...
     return arr.filter((str) => str.includes("^_^"));
+
+
+    
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -75,6 +78,7 @@ const eveCharacter = (str) => {
 
 const chickenGradients = (arr) => {
     //write your code here ...
+
 }
 // -------------------------------------------------------------------------------------------------------
 
