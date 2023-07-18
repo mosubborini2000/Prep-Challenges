@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    const sLength = s.length;\n  const tLength = t.length;\n\n  \n  if (k >= sLength + tLength) {\n    return 'Yes';\n  }\n\n  let commonPrefixLength = 0;\n  while (commonPrefixLength < sLength && commonPrefixLength < tLength) {\n    if (s[commonPrefixLength] !== t[commonPrefixLength]) {\n      break;\n    }\n    commonPrefixLength++;\n  }\n\n  const remainingOperations = k - (sLength + tLength - 2 * commonPrefixLength);\n\n  if (remainingOperations >= 0 && remainingOperations % 2 === 0) {\n    return 'Yes';\n  }\n\n\n  return 'No';\n\n}"
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    const sLength = s.length;\n  const tLength = t.length;\n\n  \n  if (k >= sLength + tLength) {\n    return 'Yes';\n  }\n\n  let commonPrefixLength = 0;\n  while (commonPrefixLength < sLength && commonPrefixLength < tLength) {\n    if (s[commonPrefixLength] !== t[commonPrefixLength]) {\n      break;\n    }\n    commonPrefixLength++;\n  }\n\n  const remainingOperations = k - (sLength + tLength - 2 * commonPrefixLength);\n\n  if (remainingOperations >= 0 && remainingOperations % 2 === 0) {\n    return 'Yes';\n  }\n  return 'No';\n\n}"
             ],
             "outputs": []
         },
